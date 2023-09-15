@@ -67,6 +67,7 @@
   // on. This helper accumulates all remaining arguments past the function’s
   // argument length (or an explicit `startIndex`), into an array that becomes
   // the last argument. Similar to ES6’s "rest parameter".
+  // restArguments处理this和argument
   function restArguments(func, startIndex) {
     startIndex = startIndex == null ? func.length - 1 : +startIndex;
     return function () {
@@ -76,6 +77,7 @@
       for (; index < length; index++) {
         rest[index] = arguments[index + startIndex];
       }
+      // startIndex的优化处理，在0,1,2时直接返回func，不需要走后续的循环处理
       switch (startIndex) {
         case 0: return func.call(this, rest);
         case 1: return func.call(this, arguments[0], rest);
@@ -91,32 +93,38 @@
   }
 
   // Is a given variable an object?
+  // 判断是否是对象
   function isObject(obj) {
     var type = typeof obj;
     return type === 'function' || (type === 'object' && !!obj);
   }
 
+  // 判断是否为null
   // Is a given value equal to null?
   function isNull(obj) {
     return obj === null;
   }
 
   // Is a given variable undefined?
+  // 判断是否为undefined
   function isUndefined(obj) {
     return obj === void 0;
   }
 
   // Is a given value a boolean?
+  // 判断是否为Boolean
   function isBoolean(obj) {
     return obj === true || obj === false || toString.call(obj) === '[object Boolean]';
   }
 
   // Is a given value a DOM element?
+  // 判断是否为element
   function isElement(obj) {
     return !!(obj && obj.nodeType === 1);
   }
 
   // Internal function for creating a `toString`-based type tester.
+  // toString.call()返回值的封装
   function tagTester(name) {
     var tag = '[object ' + name + ']';
     return function (obj) {
