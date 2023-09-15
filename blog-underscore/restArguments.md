@@ -118,6 +118,8 @@ export default function restArguments(func, startIndex) {
     for (; index < length; index++) {
       rest[index] = arguments[index + startIndex]
     }
+    //     其中 switch 只是为了优化前 3 种。当 startIndex 为 0,1,2 的时候不会走到后续的循环，减少步骤。
+    // 大于 3 后就会将 arguments 和 rest 都放入了 arg 函数中。
     switch (startIndex) {
       case 0:
         return func.call(this, rest)
