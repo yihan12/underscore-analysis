@@ -1896,7 +1896,7 @@
   var allExports = {
     __proto__: null,  // 定义__proto__为null
     VERSION: VERSION, // 暴露版本号出来
-    restArguments: restArguments,
+    restArguments: restArguments, // 处理arguments参数
     isObject: isObject,
     isNull: isNull,
     isUndefined: isUndefined,
