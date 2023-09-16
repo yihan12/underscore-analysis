@@ -11,4 +11,4 @@
 ### 文章
 
 - [x] [restArguments 方法到底对 arguments 干了啥？](https://github.com/yihan12/underscore-analysis/blob/main/blog-underscore/1.restArguments.md)
-- [x] [同样是类型判断，underscore 到底怎么判断的](https://github.com/yihan12/underscore-analysis/blob/main/blog-underscore/2.is.md)
+- [x] [同样是类型判断，underscore 有哪些不同：「void 0」](https://github.com/yihan12/underscore-analysis/blob/main/blog-underscore/2.is.md)
