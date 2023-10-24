@@ -21,7 +21,7 @@
   // instead of `window` for `WebWorker` support.
   //在浏览器中建立根对象'windows'（'self'），'global'
   //在服务器上，或者在某些虚拟机中使用‘this’。我们使用‘self’
-  //代替‘window’来支持‘WebWorker’
+  //代替window来支持WebWorker
 
   var root = (typeof self == 'object' && self.self === self && self) ||
     (typeof global == 'object' && global.global === global && global) ||
@@ -1918,7 +1918,8 @@
     isNaN: isNaN$1,
     isTypedArray: isTypedArray$1,
     isEmpty: isEmpty,
-    isMatch: isMatch,
+    isMatch: isMatch, // 还未解析
+    
     isEqual: isEqual,
     isMap: isMap,
     isWeakMap: isWeakMap,
