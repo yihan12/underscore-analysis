@@ -41,11 +41,15 @@ module.exports = {
                 children: [["start/", "写在最前面"]]
             },
             {
-                title: "最熟悉的",
+                title: "熟知的方法",
                 collapsable: false, // 不折叠
                 children: [
                     { title: "前言", path: "familiar/" },
                     { title: "类型判断", path: 'familiar/is' },
+                    { title: "restArguments", path: 'familiar/restArguments' },
+                    { title: "防抖", path: 'familiar/debounce' },
+
+
                 ],
             },
         ]
