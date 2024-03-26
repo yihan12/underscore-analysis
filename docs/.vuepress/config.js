@@ -41,23 +41,13 @@ module.exports = {
                 children: [["start/", "写在最前面"]]
             },
             {
-                title: "ES6+",
+                title: "最熟悉的",
                 collapsable: false, // 不折叠
                 children: [
-                    { title: "前言", path: "ES6+/" },
-                    { title: "变量", path: 'ES6+/variable' }
+                    { title: "前言", path: "familiar/" },
+                    { title: "类型判断", path: 'familiar/is' },
                 ],
             },
-            {
-                title: "算法与数据结构",
-                collapsable: false, // 不折叠
-                children: [
-                    { title: "前言", path: "leetcode/" },
-                    { title: "时间复杂度", path: "leetcode/time_complexity" },
-                    { title: "空间复杂度", path: "leetcode/space_complexity" },
-                    { title: "leetcode 0001", path: "leetcode/leetcode 0001" }
-                ],
-            }
         ]
     },
     configureWebpack: {
