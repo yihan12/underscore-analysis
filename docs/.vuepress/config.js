@@ -47,6 +47,7 @@ module.exports = {
                     { title: "前言", path: "familiar/" },
                     { title: "类型判断", path: 'familiar/is' },
                     { title: "restArguments", path: 'familiar/restArguments' },
+                    { title: "防抖-underscore", path: 'familiar/debounce-u' },
                     { title: "防抖", path: 'familiar/debounce' },
 
 
